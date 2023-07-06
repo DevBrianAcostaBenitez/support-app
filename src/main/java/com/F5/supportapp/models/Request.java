@@ -18,6 +18,13 @@ public class Request {
     private Date date;
     private String subject;
     private String description;
+    public Request(Long id, String name, Date date, String subject, String description) {
+        this.id= id;
+        this.name=name;
+        this.date=date;
+        this.subject=subject;
+        this.description=description;
+    }
     public Long getId() {
         return id;
     }
