@@ -2,6 +2,8 @@ package com.F5.supportapp.controllers;
 
 import java.util.List;
 
+import org.springframework.http.HttpStatusCode;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -22,8 +24,10 @@ public class RequestController {
         return requests;
     }
     @PostMapping(path = "/requests")
-    public int saveRequest(@RequestBody Request request){
-        this.service.save(request);
+    public ResponseEntity<Request> store(@RequestBody Request request){
+        Request requestSaved = this.service.save(request);
+        return ResponseEntity.status(HttpStatusCode.valueOf(201)).body(requestSaved);
 
     }
+   
 }

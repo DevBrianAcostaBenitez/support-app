@@ -17,7 +17,8 @@ public class RequestService {
         List<Request> requests = this.repository.findAll();
         return requests;
     }
-    public void save(Request request){
+    public Request save(Request request){
         this.repository.save(request);
+        return request;
     }
 }
