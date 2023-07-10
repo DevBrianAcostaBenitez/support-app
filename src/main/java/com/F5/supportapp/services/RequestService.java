@@ -1,6 +1,8 @@
 package com.F5.supportapp.services;
 
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 import org.springframework.http.HttpStatusCode;
 import org.springframework.stereotype.Service;
@@ -30,5 +32,20 @@ public class RequestService {
 
         Request requestSaved = repository.save(request);
         return requestSaved;
+    }
+    public Request findById(Long id) {
+        Request request = repository.findById(id).orElseThrow();
+        return request;
+    }
+
+    public Map<String, String> delete(Long id) {
+        Request request = repository.findById(id).orElseThrow();
+        repository.deleteById(request.getId());
+
+        Map<String,String> msg = new HashMap<>();
+        msg.put("message", "Country " + request.getName() + " successfully deleted!");
+
+        return msg;
+
     }
 }
