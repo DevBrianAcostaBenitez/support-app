@@ -1,0 +1,12 @@
+<p>list works!</p>
+<button (click)="create()">Crear</button>
+<table class="table">
+    <tbody>
+        <tr *ngFor="let aRequest of requests">
+            <td >{{aRequest.name}}</td>
+            <td>{{aRequest.subject}}</td>
+            <td >{{aRequest.description}}</td>
+            
+        </tr>
+    </tbody>
+</table>
