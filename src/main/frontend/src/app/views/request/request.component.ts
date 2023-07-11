@@ -9,18 +9,17 @@ import { RequestService } from 'src/app/services/request.service';
 })
 export class RequestComponent {
   name:string = '';
-  requestToSave!:Request2;
   constructor(private requestService:RequestService){}
   createRequest(){
     
-    this.requestToSave = {
+    let requestToSave = {
       id:1,
     name:'Jose',
     subject:'un subject',
-    description:'una descripcioin'
+    description:'una descripcioin',
+    date:new Date()
     };
-    this.requestService.createRequest(this.requestToSave);  
-
+    this.requestService.createRequest(requestToSave); 
   }
 
 }

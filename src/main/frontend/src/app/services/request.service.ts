@@ -10,7 +10,7 @@ export class RequestService {
 private baseUrl = 'http://localhost:8081'
   constructor(private http:HttpClient) {  }
   createRequest(request:object):Observable<object>{
-    return this.http.post(this.baseUrl,request);
+    return this.http.post(this.baseUrl + "/requests",request);
   }
   getRequests():Observable<Request2[]>{
     return this.http.get<Request2[]>(this.baseUrl + "/requests");

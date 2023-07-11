@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 import { Request2 } from 'src/app/models/request.model';
 import { RequestService } from 'src/app/services/request.service';
 
@@ -9,13 +10,14 @@ import { RequestService } from 'src/app/services/request.service';
 })
 export class ListComponent {
   requests!:Request2[];
-  constructor(private requestService:RequestService){}
+  requestToSave!:Request2;
+  constructor(private requestService:RequestService, private router:Router){}
   ngOnInit():void{
     this.requestService.getRequests().subscribe((data:Request2[])=>{
       this.requests = data;
     })
   }
   create(){
-    
+    this.router.navigate(['create']);
   }
 }
