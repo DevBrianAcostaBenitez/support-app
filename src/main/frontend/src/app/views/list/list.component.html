@@ -15,7 +15,7 @@
       <td>{{ aRequest.subject }}</td>
       <td>{{ aRequest.description }}</td>
       <td>{{ aRequest.date | date : "d/M/y" }}</td>
-      <button (click)="edit()">Editar</button>
+      <button (click)="edit(aRequest.id)">Editar</button>
     </tr>
   </tbody>
 </table>

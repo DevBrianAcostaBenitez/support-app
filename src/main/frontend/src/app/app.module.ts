@@ -7,7 +7,7 @@ import { RequestComponent } from './views/request/request.component';
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
 import { ListComponent } from './views/list/list.component';
-import { EditRequestComponent } from './edit-request/edit-request.component';
+import { EditRequestComponent } from './views/edit-request/edit-request.component';
 
 @NgModule({
   declarations: [
