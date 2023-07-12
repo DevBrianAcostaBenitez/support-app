@@ -28,6 +28,7 @@ public class RequestController {
         List<Request> requests = this.service.getAll();
         return requests;
     }
+    @CrossOrigin(origins="http://localhost:4200")
      @GetMapping(path = "/requests/{id}")
     public Request show(@PathVariable("id") Long id) {
         Request request = service.findById(id);

@@ -21,6 +21,7 @@ export class ListComponent {
     this.router.navigate(['create']);
   }
   edit(id:number){
-    this.router.navigate(['edit/ '+ id]);
+    console.log("list.component.ts->editar id=" + id);
+    this.router.navigate(['edit/'+ id]);
   }
 }
