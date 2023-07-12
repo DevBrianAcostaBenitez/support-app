@@ -1,13 +1,15 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { RequestService } from 'src/app/services/request.service';
 import { ActivatedRoute } from '@angular/router';
+import { Request2 } from 'src/app/models/request.model';
 @Component({
   selector: 'app-edit-request',
   templateUrl: './edit-request.component.html',
   styleUrls: ['./edit-request.component.scss']
 })
 export class EditRequestComponent {
-  id:number=0;
+  request!:Request2;
+  @Input() id!:number;
   name:string = '';
   date:Date =new Date();
   subject:string = '';
@@ -29,25 +31,16 @@ export class EditRequestComponent {
   
   populateFormWithRequestData(){
     if (this.requestService) {
-      this.name = this.requestService.name;
-      this.type = this.requestService.type;
-      this.family = this.requestService.family;
-      this.gender = this.requestService.gender;
-      this.date = this.formatDate(this.animal.admission);
-      if (this.animal.image) {
-        this.convertImageUrlToFile(this.animal.image)
-          .then(file => {
-            this.image = file;
-          })
-          .catch(error => {
-            console.error('Error converting image URL to file:', error);
-          });
-      }
-      console.log(this.animal)
+      this.name = "";
+      this.subject = "";
+      this.description = "";""
+      this.date = this.request.date;
+      
+      console.log(this.request)
     }
   }
  
-  }
+  
   formatDate(date: Date): string {
     const formattedDate = new Date(date).toISOString().split('T')[0];
     return formattedDate;
@@ -63,13 +56,13 @@ export class EditRequestComponent {
     date:new Date()
     };
     
-    /*this.requestService.createRequest(requestToSave).subscribe(
+    this.requestService.updateRequest(requestToSave).subscribe(
       (response) => {
         console.log(response);
       },
       (error) => {
         console.log(error);
       }
-    );*/
+    );
   }
 }
