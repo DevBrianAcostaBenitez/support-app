@@ -15,4 +15,11 @@ private baseUrl = 'http://localhost:8081'
   getRequests():Observable<Request2[]>{
     return this.http.get<Request2[]>(this.baseUrl + "/requests");
   }
+  getRequestbyId(id : number): Observable<Request2>
+  {
+    return this.http.get<Request2>(this.baseUrl +"/requests/"+id);
+  }
+  updateRequest(id: number, data: Request2): Observable<Request2> {
+    return this.http.put<Request2>(this.baseUrl +"/requests/"+ id,data);
+  }
 }
