@@ -20,4 +20,7 @@ export class ListComponent {
   create(){
     this.router.navigate(['create']);
   }
+  edit(){
+
+  }
 }

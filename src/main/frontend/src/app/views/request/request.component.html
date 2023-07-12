@@ -3,19 +3,19 @@
         <div class="col-xs-12">
             <div class="form-group">
                 <label for="nombre">Nombre</label>
-                <input [(ngModel)]="name" type="text" name="nombre" id="form__nombre" class="form-control">
+                <input  type="text" name="name" id="form__nombre" class="form-control" [(ngModel)]="name">
             </div>
             <div class="form-group">
                 <label for="date">Fecha</label>
-                <input type="date" name="date" id="form__date">
+                <input type="date" name="date" id="form__date" [(ngModel)]="date">
             </div>
             <div class="form-group">
                 <label for="subject">Tema</label>
-                <input type="text" name="subject" id="form__subject">
+                <input type="text" name="subject" id="form__subject" [(ngModel)]="subject">
             </div>
             <div class="form-group">
                 <label for="description">Descripcion de la consulta</label>
-                <textarea id="form__description" name="description" rows="4" cols="50"></textarea>                
+                <textarea id="form__description" name="description" rows="4" cols="50" [(ngModel)]="description"></textarea>                
             </div>
         </div>
     </div>
