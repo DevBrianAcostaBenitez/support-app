@@ -21,10 +21,7 @@ public class RequestService {
         List<Request> requests = this.repository.findAll();
         return requests;
     }
-    // public Request save(Request request){
-    //     this.repository.save(request);
-    //     return request;
-    // }
+    
     public Request save(Request request){
         if (request.getName() == "") {
             throw new ResponseStatusException(HttpStatusCode.valueOf(400), "name empty");
