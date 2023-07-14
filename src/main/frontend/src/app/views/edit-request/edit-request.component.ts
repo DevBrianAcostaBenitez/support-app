@@ -1,6 +1,6 @@
 import { Component, Input } from '@angular/core';
 import { RequestService } from 'src/app/services/request.service';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { Request2 } from 'src/app/models/request.model';
 @Component({
   selector: 'app-edit-request',
@@ -16,7 +16,7 @@ export class EditRequestComponent {
   description: string = '';
   constructor(
     private requestService: RequestService,
-    private route: ActivatedRoute
+    private route: ActivatedRoute, private router:Router
   ) {}
 
   ngOnInit() {
@@ -64,5 +64,9 @@ export class EditRequestComponent {
         console.log(error);
       }
     );
+    this.router.navigate(['']);
+  }
+  redirectHome(){
+    this.router.navigate(['']);
   }
 }

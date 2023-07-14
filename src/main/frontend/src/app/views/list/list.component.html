@@ -1,21 +1,22 @@
-<button (click)="create()">Crear</button>
+<button class="margin-top-bottom button-padding" (click)="create()">Crear</button>
 <table class="table">
   
-    <thead>
+    <!-- <thead>
       <tr>
         <th>Nombre</th>
         <th>Subject</th>
         <th>Description</th>
         <th>Date</th>
       </tr>
-    </thead>
+    </thead> -->
 <tbody>
-    <tr *ngFor="let aRequest of requests">
+    <tr class="margin-top-bottom" *ngFor="let aRequest of requests">
       <td>{{ aRequest.name }}</td>
       <td>{{ aRequest.subject }}</td>
       <td>{{ aRequest.description }}</td>
       <td>{{ aRequest.date | date : "d/M/y" }}</td>
-      <button (click)="edit(aRequest.id)">Editar</button>
+      <button class="margin-left "(click)="edit(aRequest.id)">Editar</button>
+      <button class="margin-left "(click)="deleteRequest(aRequest.id)">Borrar</button>
     </tr>
   </tbody>
 </table>

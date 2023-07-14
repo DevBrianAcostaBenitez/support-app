@@ -24,4 +24,7 @@ export class ListComponent {
     console.log("list.component.ts->editar id=" + id);
     this.router.navigate(['edit/'+ id]);
   }
+  deleteRequest(id:number){
+
+  }
 }

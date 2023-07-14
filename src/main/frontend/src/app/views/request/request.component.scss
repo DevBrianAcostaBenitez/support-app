@@ -1,0 +1,38 @@
+form{
+    margin-left: 5%;
+    margin-right: 5%;
+}
+label{
+    background-color: rgba(16, 122, 204, 1);
+    padding: 1% 2%;
+    font-size: 2em;
+}
+.field-date{
+    background-color: rgba(111, 123, 172, 1);
+}
+.name-date{
+    display: flex;
+    
+}
+.field-name{
+    max-width: 20%;
+}
+.margin-input-left{
+    margin-left: 5%;
+}
+.margin-label-left{
+    margin-left: 10%;
+}
+.margin-top{
+    margin-top: 5%;
+}
+.vertical{
+    display: flex;
+    flex-direction: column;
+}
+.label-size{
+    max-width: 14em;
+}
+.right{
+    right: 0;
+}
