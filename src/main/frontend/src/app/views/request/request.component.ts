@@ -34,7 +34,8 @@ export class RequestComponent {
     this.router.navigate(['']);
   }
   redirectHome(){
-    this.router.navigate(['']);
+    this.router.navigate([''])
+    
   }
   reset(){
     this.name = '';

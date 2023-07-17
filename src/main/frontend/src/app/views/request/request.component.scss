@@ -2,6 +2,12 @@ form{
     margin-left: 5%;
     margin-right: 5%;
 }
+.form-group{
+    margin-bottom:1%;
+}
+.label-margin-bottom{
+    margin-bottom:1%;
+}
 label{
     background-color: rgba(16, 122, 204, 1);
     padding: 1% 2%;
@@ -12,19 +18,24 @@ label{
 }
 .name-date{
     display: flex;
-    
+    justify-content: space-between;
 }
 .field-name{
-    max-width: 20%;
+    max-width: 25%;
+}
+.field-date{
+    width:15%
 }
 .margin-input-left{
     margin-left: 5%;
+    
 }
+
 .margin-label-left{
-    margin-left: 10%;
+    margin-left: 20%;
 }
 .margin-top{
-    margin-top: 5%;
+    margin-top: 3%;
 }
 .vertical{
     display: flex;
@@ -35,4 +46,17 @@ label{
 }
 .right{
     right: 0;
+}
+
+.buttons{
+    display:flex;
+    justify-content: space-between;
+}
+.buttons-right{
+    display:flex;
+}
+
+.create-button{
+    margin-left: 5% ;
+    
 }

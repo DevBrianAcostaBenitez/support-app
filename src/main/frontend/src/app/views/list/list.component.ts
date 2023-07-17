@@ -11,11 +11,13 @@ import { RequestService } from 'src/app/services/request.service';
 export class ListComponent {
   requests!:Request2[];
   requestToSave!:Request2;
-  constructor(private requestService:RequestService, private router:Router){}
-  ngOnInit():void{
+  constructor(private requestService:RequestService, private router:Router){
     this.requestService.getRequests().subscribe((data:Request2[])=>{
       this.requests = data;
     })
+  }
+  ngOnInit():void{
+   
   }
   create(){
     this.router.navigate(['create']);

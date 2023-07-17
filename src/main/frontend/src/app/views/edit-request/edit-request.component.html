@@ -1,27 +1,27 @@
 <form action="">
-    <div class="row">
-        <div class="col-xs-12">
-            <div class="form-group">
+    <div class="">
+        <div class="">
+            <div class="form-group name-date">
                 <label for="nombre">Nombre</label>
-                <input  type="text" name="name" id="form__nombre" class="form-control" [(ngModel)]="name">
+                <input type="text" name="name" id="form__nombre" class="form-control field-name" [(ngModel)]="name">
+             
+                <label for="date" class="margin-label-left ">Fecha</label>
+                <input  disabled type="date" name="date" id="form__date " class="field-date margin-input-left" [(ngModel)]="date">
+
             </div>
-            <div class="form-group">
-                <label for="date">Fecha</label>
-                <input disabled type="date" name="date" id="form__date" [(ngModel)]="date">
-            </div>
-            <div class="form-group">
-                <label for="subject">Tema</label>
+            <div class="form-group vertical">
+                <label class="label-size label-margin-bottom" for="subject">Tema</label>
                 <input type="text" name="subject" id="form__subject" [(ngModel)]="subject">
             </div>
-            <div class="form-group">
-                <label for="description">Descripcion de la consulta</label>
-                <textarea id="form__description" name="description" rows="4" cols="50" [(ngModel)]="description"></textarea>                
+            <div class="form-group vertical">
+                <label class="label-size label-margin-bottom" for="description">Descripcion de la consulta</label>
+                <textarea id="form__description" name="description" rows="20" cols="50" [(ngModel)]="description"></textarea>                
             </div>
         </div>
     </div>
     <div class="row">
-        <div class="col-xs-12">
-            <button (click)="redirectHome()" type="button">Cancelar</button>
+        <div class="col-xs-12 buttons">
+            <button (click)="redirectHome()" class="redirect-button" type="button">Cancelar</button>
             <button (click)='saveRequest()' type="submit">Guardar</button>
         </div>
     </div>

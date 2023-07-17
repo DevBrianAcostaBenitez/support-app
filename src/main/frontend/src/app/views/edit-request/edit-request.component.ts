@@ -64,7 +64,7 @@ export class EditRequestComponent {
         console.log(error);
       }
     );
-    this.router.navigate(['']);
+    this.router.navigate([''])
   }
   redirectHome(){
     this.router.navigate(['']);
