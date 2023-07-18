@@ -19,10 +19,6 @@ export class ListComponent {
   ngOnInit():void{
    
   }
-  ngDoCheck(){
-    this.requestService.getRequests().subscribe((data:Request2[])=>{
-      this.requests = data;})
-  }
   create(){
     this.router.navigate(['create']);
   }
